@@ -216,7 +216,9 @@ Note: You'll probably want to turn off the camera's [Image Frame option](https:/
 After every multiple exposure photo the camera resets the configured overlay raw, requiring you to set it again to use for the next photo. I've developed the following shortcut that helps workaround this limitation, or at least reduce it to a set of fixed camera control inputs that you can memorize and use without having to look at the menu system.
 
 1. Add Multiple exposure to the top of your MY MENU by going to `MY MENU` -> `Add items` -> `PHOTO SHOOTING MENU` -> `Multiple exposure` and choosing the first position in your MY MENU. You can also use `Rank items` to reposition `Multiple exposure` to the top of the menu.
+<br clear="all">
 ![Multiple exposure at the top of MY MENU](https://photos.smugmug.com/photos/i-vSt2TwF/0/NNrMM7VXwJXdGGjsppVvbznh5ds7DNrPFrpCmzhP6/S/i-vSt2TwF-S.png)
+<br clear="all">
 
 2. Configure a function control to `Access top item in MY MENU` by going to `CUSTOM SETTINGS MENU` -> `Controls` -> `Custom controls (shooting)` and selecting a control to assign
 
