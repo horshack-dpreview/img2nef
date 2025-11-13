@@ -44,7 +44,7 @@ Creates a 16:9 solid-line white frameline and a 1:1 dashed red frameline.
 When no output filename is specified createoverlay will automatically generate one, which by default is the concatenation of the camera model and each of the frameline and gridlines you specified, stored in the current working directory. For the first example this will be `Overlay_Z6III_Frame-16x9.PNG` and the second `Overlay_Z6III_Grid-4x4.PNG`.
 
 ## More output options
-`<output filename>`
+`<output filename>`  
 You can explicitly specify the output filename by providing an additional argument. It can include an optional path as well. If any part of the path or filename has spaces you must enclose the entire text in double quotes. Example:
 
 `createoverlay Z6III --frameline 16:9 "c:\My Documents\MyGrid.PNG"`  
