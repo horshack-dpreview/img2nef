@@ -15,7 +15,7 @@ ExifTool is also required ([download link](https://exiftool.org/))  and must be 
 ## Installation
 Download img2nef by [clicking here](https://github.com/horshack-dpreview/img2nef/archive/refs/heads/main.zip) and unzip into a directory of your choice, or if you have git:
 
- `git clone https://github.com/horshack-dpreview/img2nef.git`
+ `git clone https://github.com/horshack-dpreview/img2nef.git`  
 
 ## Running
 Depending on your platform, img2nef can be started in one of the following ways:
@@ -23,16 +23,18 @@ Depending on your platform, img2nef can be started in one of the following ways:
 * python3 img2nef.py
 * imgn2ef.py
 
-## Quick StartBasic parameters
+## Quick Start
+
+### Basic parameters
 img2nef has many options but there are only two basic parameters are required:
 * Nikon Camera Model (or Template NEF)
 * Source Image File
 
 ### Examples:
-`python img2nef.py Z6III sunset.jpg`
+`python img2nef.py Z6III sunset.jpg`  
 Converts the image sunset.jpg into a Nikon Z6 III raw, using the built-in template NEF for the Z6 III.
 
-`python imgn2nef.py IMG_0085.NEF sunset.jpg`
+`python imgn2nef.py IMG_0085.NEF sunset.jpg`  
 Converts the image `sunset.jpg` into a Nikon raw, using the supplied template NEF. The model for the generated raw will match the model `IMG_0085.NEF` was shot with.
 
 img2nef also supports Numpy (.npy) file sources. See [Numpy Sources](#numpy-sources) for details.
@@ -59,10 +61,10 @@ See the [tips for creating template NEFs](#template-nef-tips) for best practices
 When no output filename was specified img2nef will automatically generate one, which by default is the concatenation of the model/template NEF and source file names. For the first example this will be `Z6III_sunset.NEF`, stored in the same directory as `sunset.jpg`
 
 ## More output options
-`<output filename>`
+`<output filename>`  
 You can explicitly specify the output filename by providing a third argument. It can include an optional path as well. If any part of the path or filename has spaces you must enclose the entire text in double quotes. Example:
 
-`img2nef Z6III sunset.jpg "c:\My Documents\sunset.NEF"`
+`img2nef Z6III sunset.jpg "c:\My Documents\sunset.NEF"`  
 
 ### `--outputdir <path>`
 Directory to store the generated NEF into. If this is specified without an `<output filename>` then img2nef will generate the output filename automatically and store it in the `--outputdir` path.
@@ -76,7 +78,7 @@ Method used to automatically generate the output filename when the `<output file
 
 Example:
 
-`img2nef Z6III sunset.jpg --outputdir c:\docs --outputfilenamemethod INPUTFILE`
+`img2nef Z6III sunset.jpg --outputdir c:\docs --outputfilenamemethod INPUTFILE`  
 
 Converts sunset.jpg, storing result to `c:\docs\sunset.NEF`
 
@@ -152,7 +154,7 @@ Image sensors have uneven sensitivity to color across the light frequency spectr
 
 Since img2nef goes in the opposite direction, ie from a rendered image back to raw data, it has to apply the inverse of these multipliers, to simulate the lower sensitivity of the red and blue pixels. Normally img2nef uses the WB multipliers in the template NEF, which were shot with a "sunny" WB to handle normal white-balanced source images. The `--src..wbmultipliers` lets you specify a different set of WB multipliers to inversely apply. All values are in floating-point. Example:
 
-`--src.wbmultipliers=1.3568,1.72325`
+`--src.wbmultipliers=1.3568,1.72325`  
 Applies a 1/3.3568 multiplier to the red pixels and 1/1.72325 multiplier to the blue pixels.
 
 ### `--src.hsl H,S,L`
@@ -187,7 +189,7 @@ Note that `--embeddedimg` can be used with non-Numpy image sources as well. Use 
 ## Specifying options in separate file, including default options
 In addition to supplying options on the command line, you can also place additional options in a text file and supply its filename by placing a `!` before it. For example:
 
-`img2nef !myoptions.txt --src.grayscale`
+`img2nef !myoptions.txt --src.grayscale`  
 
 In the text file each option must be on a separate line, and any values for the option must be connected via an equal sign instead of space, otherwise the value will be interpreted as a different option. Example `myoptions.txt`
 ```
@@ -237,4 +239,4 @@ The next best option is to shoot with a lens that has very little optical distor
 ### C-optimized NEF encoder
 img2nef is written primarily in Python, with the NEF encoder logic written in C for performance. A pre-compiled version of the encoder is included in the Windows, Mac, and Linux directories, each of which is automatically loaded based on the detected platform. Before loading the platform-specific library img2nef will first check for the library in its base directory - this allows you to compile/use the NEF encoding module for non-standard platforms as well. The encoder module should compile without modification on any platform - it's coded to work with various native integer sizes and on both small and big endian configurations. You can compile the module via the following gcc invocation:
 
-`gcc -shared -O2 -o nefencode.so nefencode.c -fPIC`ult is an NEF that's identical to the template NEF but with the raw data and embedded jpgs replaced (embedded jpgs are used by image viewers to preview the raw data without having to develop it first, including the in-camera playback functionality). The template NEF is never modified.
+`gcc -shared -O2 -o nefencode.so nefencode.c -fPIC`  

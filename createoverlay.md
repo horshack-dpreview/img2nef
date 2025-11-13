@@ -25,16 +25,16 @@ createoverlay has many options but only two parameters are typically required:
 * At least one frameline or gridline specification
 
 ### Examples:
-`python createoverlay.py Z6III --frameline 16:9`
+`python createoverlay.py Z6III --frameline 16:9`  
 Creates a 16:9 frameline with default line and fill characteristics for a Nikon Z6 III as a PNG file, then converts the PNG to a NIkon Z6 III NEF raw. The resulting PNG is opened in your system's default image viewer.
 
 ![Sample 16:9 frameline](https://photos.smugmug.com/photos/i-6J6gFbr/0/KNRxzW5D5R4MGQsbtCfb6HtQJxd4q3TDtC5kv8TDd/S/i-6J6gFbr-S.png)
 
-`python createoverlay.py Z6III --gridline 4x4`
+`python createoverlay.py Z6III --gridline 4x4`  
 Creates a 4x4 gridline with default line and fill characteristics for a Nikon Z6 III.
 ![Sample 4x4 Gridline](https://photos.smugmug.com/photos/i-CjBJhH3/0/KTr95dS96C2QR3RHrT5wLH8spZDzfd3MVz2tFLd8d/S/i-CjBJhH3-S.png)
 
-`python createoverlay.py Z6III --frameline 16:9 --frameline 1:1,dashedline=50-50,linecolor=#ff0000`
+`python createoverlay.py Z6III --frameline 16:9 --frameline 1:1,dashedline=50-50,linecolor=#ff0000`  
 Creates a 16:9 solid-line white frameline and a 1:1 dashed red frameline.
 ![Sample 16:9 and 1:1 framelines](https://photos.smugmug.com/photos/i-jbH2CpP/0/LHjtkJDbB3ZzpHjWtcPJhTKg9MwfkRMQQHxg5KwMM/S/i-jbH2CpP-S.png)
 
@@ -45,7 +45,7 @@ When no output filename is specified createoverlay will automatically generate o
 `<output filename>`
 You can explicitly specify the output filename by providing an additional argument. It can include an optional path as well. If any part of the path or filename has spaces you must enclose the entire text in double quotes. Example:
 
-`createoverlay Z6III --frameline 16:9 "c:\My Documents\MyGrid.PNG"`
+`createoverlay Z6III --frameline 16:9 "c:\My Documents\MyGrid.PNG"`  
 
 ### `--outputdir <path>`
 Directory to store the generated overlay into. If this is specified without an `<output filename>` then createoverlay will generate the output filename automatically and store it in the `--outputdir` path.
@@ -74,12 +74,12 @@ Each frameline parameter is separated with commas, with no spaces allowed - a sp
 
 The `aspectratio` parameter is required - all others are optional. Any parameter not specified will use the default for that setting, which can be set separately via that option name outside of a `--frameline`. For example:
 
-`--frameline 4:3 --frameline 16:9,linecolor=#ff0000 --linecolor=#0000ff`
+`--frameline 4:3 --frameline 16:9,linecolor=#ff0000 --linecolor=#0000ff`  
 Creates a 4:3 frameline using all default values; the default `linecolor` was specified as blue, so the 4:3 frameline will be blue. A 16:9 frameline is also created with a line color of red since that color was specified for that frameline. 
 
 You can optionally leave out the parameter name and just provide the values instead. Use an empty field to skip a value. For example:
 
-`--frameline 1:1,16,5-10,,,center-left`
+`--frameline 1:1,16,5-10,,,center-left`  
 Creates a 1:1 frameline with a line width of 16 pixels, dash pattern of 5 pixels with 10 pixel gaps, default line and fill colors (empty fields), and an aspect ratio label position vertically centered on the left side of the frame.
 
 ### `--gridline griddimensions=columns x rows, aspectratio=columns:rows, linewidth=#pixels,dashedline=dashlen-gaplen, linecolor=#RRGGBB`
@@ -104,7 +104,7 @@ Note there are three horizontal and vertical lines, creating 4 columns and 4 row
 
 You can optionally leave out the parameter name and just provide the values instead. Use an empty field to skip a value. For example:
 
-`--gridline 4x4,,16,,#ff0000`
+`--gridline 4x4,,16,,#ff0000`  
 Creates a 4:4 grid with default aspect ratio (3:2),  a line width of 16 pixels, no dash pattern (solid line by default), and line color of red.
 
 ### `--linewidth #pixels`
@@ -128,7 +128,7 @@ Sets the size of the aspect ratio label as a percentage of the raw picture heigh
 ### `--dimensions raw columns x rows, jpg columns x rows`
 Normally the raw and jpg dimensions are established by the camera model specified. You can override those dimensions with this option, or provide them when no model is specified. Example:
 
-`--dimensions 6048x4032,6000x4000`
+`--dimensions 6048x4032,6000x4000`  
 
 ### `--imagetype extension`
 Determines the image format of the generated overlay, specified via the file extension of the format. Default is PNG.
@@ -148,7 +148,7 @@ Verbosity of output during execution. Default is `INFO`. When `SILENT`, only err
 ## Specifying options in separate file, including default options
 In addition to supplying options on the command line, you can also place additional options in a text file and supply its filename by placing a `!` before it. For example:
 
-`createoverlay !myoptions.txt --generatenef no`
+`createoverlay !myoptions.txt --generatenef no`  
 
 In the text file each option must be on a separate line, and any values for the option must be connected via an equal sign instead of space, otherwise the value will be interpreted as a different option. Example `myoptions.txt`
 ```
