@@ -95,6 +95,7 @@ Multiple `--gridline` options can be specified, although note they'll typically 
 Each column/row is demarcated by vertical and horizontal lines, so the number of lines will be  the column/row values minus 1. For example, here is a `--gridline 4x4`
 <br clear="all">
 ![4x4 Gridline with 3 lines on each axis](https://photos.smugmug.com/photos/i-CjBJhH3/0/KTr95dS96C2QR3RHrT5wLH8spZDzfd3MVz2tFLd8d/S/i-CjBJhH3-S.png)
+<br clear="all">
 Note there are three horizontal and vertical lines, creating 4 columns and 4 rows.
 
 `aspectratio` optionally confines the grid to an aspect ratio. The full 3:2 sensor area is used for the grid when `aspectratio` is not specified.
