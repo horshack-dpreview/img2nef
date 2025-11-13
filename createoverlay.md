@@ -32,10 +32,12 @@ Creates a 16:9 frameline with default line and fill characteristics for a Nikon 
 
 `python createoverlay.py Z6III --gridline 4x4`  
 Creates a 4x4 gridline with default line and fill characteristics for a Nikon Z6 III.
+<br clear="all">
 ![Sample 4x4 Gridline](https://photos.smugmug.com/photos/i-CjBJhH3/0/KTr95dS96C2QR3RHrT5wLH8spZDzfd3MVz2tFLd8d/S/i-CjBJhH3-S.png)
 
 `python createoverlay.py Z6III --frameline 16:9 --frameline 1:1,dashedline=50-50,linecolor=#ff0000`  
 Creates a 16:9 solid-line white frameline and a 1:1 dashed red frameline.
+<br clear="all">
 ![Sample 16:9 and 1:1 framelines](https://photos.smugmug.com/photos/i-jbH2CpP/0/LHjtkJDbB3ZzpHjWtcPJhTKg9MwfkRMQQHxg5KwMM/S/i-jbH2CpP-S.png)
 
 ## Automatic output filename
