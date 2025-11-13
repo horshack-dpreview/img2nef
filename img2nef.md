@@ -1,5 +1,5 @@
 # img2nef
-Command-line utility that converts any image file into a Nikon NEF losslessly-compressed raw. Includes additional utilities that make use ofutilize img2nef, such as [createoverlay](createoverlay.md)makevf for creating viewfinder overlays with custom aspect ratio framing guides and display grids.
+Command-line utility that converts any image file into a Nikon NEF losslessly-compressed raw. Includes additional utilities that make use ofutilize img2nef, such as [createoverlay](createoverlay.md) for creating viewfinder overlays with custom aspect ratio framing guides and display grids.
 
 ## Requirements
 img2nef supports all Nikon cameras that support lossless 14-bit raw compression, which is most models except their entry-level cameras.

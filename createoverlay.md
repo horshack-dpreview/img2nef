@@ -2,7 +2,7 @@
 Command-line utility for creating viewfinder overlays with custom aspect ratio framelines and grid lines, which can then be converted into Nikon NEF raw files and used with Nikon's multiple exposure overlay feature for shooting with Nikon Z cameras - see the  [Using overlays with Nikon's multiple exposure feature](#using-overlays-with-nikon-multiple-exposure-feature) for details.
 
 ## Requirements
-createoverlay is part of [imgn2ef](img2nef.md) and runs on Windows, Mac, and Linux. It requires Python 3.10 or later, which can be [downloaded here](https://www.python.org/downloads/). The following additional Python packages are required:
+createoverlay is part of [img2nef](img2nef.md) and runs on Windows, Mac, and Linux. It requires Python 3.10 or later, which can be [downloaded here](https://www.python.org/downloads/). The following additional Python packages are required:
 
     pip install pillow
 
