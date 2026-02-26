@@ -250,8 +250,8 @@ With all that setup out of the way, the procedure to re-select your overlay raw 
 4. Press the center button on the rear multi-selector to accept the oldest raw selection.
 5. Half-press the shutter to re-enter shooting mode.
 
-![Shortcut sequence to re-select oldest overlay raw for multiple exposure](https://photos.smugmug.com/photos/i-fT3qQvr/0/MtLwCqWkzhHHgDPSnvHDftMxKxDbRQhB6sr4XxXsF/O/i-fT3qQvr.png)
 ![Shortcut sequence to re-select oldest overlay raw for multiple exposure](doc/Multiple_exposure_shortcut_sequence.png)
 
 
 Obviously these are more clicks than ideal but the sequence is easy commit to muscle memory and perform without having to actually look at the menus while you perform them.
+
