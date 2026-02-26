@@ -29,16 +29,19 @@ createoverlay has many options but only two parameters are typically required:
 Creates a 16:9 frameline with default line and fill characteristics for a Nikon Z6 III as a PNG file, then converts the PNG to a NIkon Z6 III NEF raw. The resulting PNG is opened in your system's default image viewer.
 
 ![Sample 16:9 frameline](https://photos.smugmug.com/photos/i-6J6gFbr/0/KNRxzW5D5R4MGQsbtCfb6HtQJxd4q3TDtC5kv8TDd/S/i-6J6gFbr-S.png)
+![Sample 16:9 frameline](doc/Overlay_Z6III_Frame-16x9.png)
 
 `python createoverlay.py Z6III --gridline 4x4`  
 Creates a 4x4 gridline with default line and fill characteristics for a Nikon Z6 III.
 <br clear="all">
 ![Sample 4x4 Gridline](https://photos.smugmug.com/photos/i-CjBJhH3/0/KTr95dS96C2QR3RHrT5wLH8spZDzfd3MVz2tFLd8d/S/i-CjBJhH3-S.png)
+![Sample 4x4 Gridline](doc/Overlay_Z6III_Grid-4x4.png)
 
 `python createoverlay.py Z6III --frameline 16:9 --frameline 1:1,dashedline=50-50,linecolor=#ff0000`  
 Creates a 16:9 solid-line white frameline and a 1:1 dashed red frameline.
 <br clear="all">
 ![Sample 16:9 and 1:1 framelines](https://photos.smugmug.com/photos/i-jbH2CpP/0/LHjtkJDbB3ZzpHjWtcPJhTKg9MwfkRMQQHxg5KwMM/S/i-jbH2CpP-S.png)
+![Sample 16:9 and 1:1 framelines](doc/Overlay_Z6III_Frame-16x9_Frame-1x1.png)
 
 ## Automatic output filename
 When no output filename is specified createoverlay will automatically generate one, which by default is the concatenation of the camera model and each of the frameline and gridlines you specified, stored in the current working directory. For the first example this will be `Overlay_Z6III_Frame-16x9.PNG` and the second `Overlay_Z6III_Grid-4x4.PNG`.
@@ -95,6 +98,7 @@ Multiple `--gridline` options can be specified, although note they'll typically 
 Each column/row is demarcated by vertical and horizontal lines, so the number of lines will be  the column/row values minus 1. For example, here is a `--gridline 4x4`
 <br clear="all">
 ![4x4 Gridline with 3 lines on each axis](https://photos.smugmug.com/photos/i-CjBJhH3/0/KTr95dS96C2QR3RHrT5wLH8spZDzfd3MVz2tFLd8d/S/i-CjBJhH3-S.png)
+![4x4 Gridline with 3 lines on each axis](doc/Overlay_Z6III_Grid-4x4.png)
 <br clear="all">
 Note there are three horizontal and vertical lines, creating 4 columns and 4 rows.
 
@@ -182,6 +186,7 @@ Here's the procedure:
 1. Go to the PHOTO SHOOTING MENU and enter the Muliple exposure option.
 
 ![PHOTO SHOOTING MENU](https://photos.smugmug.com/photos/i-BKsDdxK/0/MVzJWzKTmd8XS9vdNQNqBCLnr64pt4Gcc8fh8ncZ8/S/i-BKsDdxK-S.png)
+![PHOTO SHOOTING MENU](doc/multiple_exposure_photo_shooting_menu_enter.png)
 
 3. Set the multiple exposure options to:
 * Multiple exposure mode to "On (series)",
@@ -191,10 +196,12 @@ Here's the procedure:
 * Overlay shooting to "ON"
 
 ![Multiple Exposure menu options](https://photos.smugmug.com/photos/i-5c8Gvg7/0/LwRhvQJGv2MKpB6rJzDnT7k5jv8wkWx5mfcbT3Kf6/S/i-5c8Gvg7-S.png)
+![Multiple Exposure menu options](doc/multiple_exposure_options_set.png)
 
 4. Use `Select first exposure (RAW)` and navigate to the overlay raw you'd like to use.
 
 ![Selecting overlay as first exposure](https://photos.smugmug.com/photos/i-7K6VzPK/0/KkGhp93nQbHd9Wc8JCLrDFrXGfHn3FLDs9r9MBh3G/S/i-7K6VzPK-S.png)
+![Selecting overlay as first exposure](doc/multiple_exposure_selects_last_raw_shot.png)
 
 5. Half-press the shutter to return to shooting mode. 
 
@@ -202,6 +209,7 @@ Here's the procedure:
 
 The camera previews the multiple exposure by compositing the overlay raw you selected over the active scene.
 ![Viewfinder display with overlay](https://photos.smugmug.com/photos/i-D8cfxWs/0/KmRKm3g3HhVdfZRGH7c2wQR74kcK5KF3bcXxZVfzk/S/i-D8cfxWs-S.jpg)
+![Viewfinder display with overlay](doc/multiple_exposure_1-1_overlay_through_vf.jpg)
 
 When you take a picture the camera stores two images on the card - a composite jpg that combines content from the overlay raw with the scene content, using whichever composting mode you selected, and a raw imge, which has only the scene content that is no different than if it were shot outside of the multiple exposure mode.
 
@@ -217,14 +225,17 @@ After every multiple exposure photo the camera resets the configured overlay raw
 
 1. Add Multiple exposure to the top of your MY MENU by going to `MY MENU` -> `Add items` -> `PHOTO SHOOTING MENU` -> `Multiple exposure` and choosing the first position in your MY MENU. You can also use `Rank items` to reposition `Multiple exposure` to the top of the menu.
 ![Multiple exposure at the top of MY MENU](https://photos.smugmug.com/photos/i-vSt2TwF/0/NNrMM7VXwJXdGGjsppVvbznh5ds7DNrPFrpCmzhP6/S/i-vSt2TwF-S.png)
+![Multiple exposure at the top of MY MENU](doc/multiple_exposure_top_of_my_menu.png)
 
-2. Configure a function control to `Access top item in MY MENU` by going to `CUSTOM SETTINGS MENU` -> `Controls` -> `Custom controls (shooting)` and selecting a control to assign
+3. Configure a function control to `Access top item in MY MENU` by going to `CUSTOM SETTINGS MENU` -> `Controls` -> `Custom controls (shooting)` and selecting a control to assign
 
 ![Selecting a custom controls](https://photos.smugmug.com/photos/i-3ZGvtQK/0/NdRf4NXkfNxPdnFNmtLdTnnPQgTVNBKC6tcT2CFRP/S/i-3ZGvtQK-S.png)
+![Selecting a custom controls](doc/custom_controls_after_assigning_to_MY_MENU.png)
 
 Select the desired control and assign it to `Access top item in MY MENU`.
 
 ![Assigning control to top of MY MENU](https://photos.smugmug.com/photos/i-LPLzt45/0/KHRxZcWCnTmQL3nG36p3257S6pZNbbRhsM5VB9pfJ/S/i-LPLzt45-S.png)
+![Assigning control to top of MY MENU](doc/custom_controls_assign_Access_top_item_in_MY_MENU.png)
 
 3. Ideally you want your overlay raw to be the first file on the media card. This is because the camera always defaults to the most recent raw when you're prompted to `Select first exposure (RAW)`. By having the overlay as the oldest raw, you can always select it via a single right-button click on the multi-control dial because that will wrap the selection around from the newest to oldest image.
 
@@ -240,5 +251,7 @@ With all that setup out of the way, the procedure to re-select your overlay raw 
 5. Half-press the shutter to re-enter shooting mode.
 
 ![Shortcut sequence to re-select oldest overlay raw for multiple exposure](https://photos.smugmug.com/photos/i-fT3qQvr/0/MtLwCqWkzhHHgDPSnvHDftMxKxDbRQhB6sr4XxXsF/O/i-fT3qQvr.png)
+![Shortcut sequence to re-select oldest overlay raw for multiple exposure](doc/Multiple_exposure_shortcut_sequence.png)
+
 
 Obviously these are more clicks than ideal but the sequence is easy commit to muscle memory and perform without having to actually look at the menus while you perform them.
