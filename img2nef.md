@@ -26,7 +26,7 @@ Depending on your platform, img2nef can be started in one of the following ways:
 ## Quick Start
 
 ### Basic parameters
-img2nef has many options but there are only two basic parameters are required:
+img2nef has many options but there are only two basic parameters required:
 * Nikon Camera Model (or Template NEF)
 * Source Image File
 
